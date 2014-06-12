@@ -1,0 +1,4 @@
+node_modules
+node
+.idea
+src/main/webapp/bower_components
