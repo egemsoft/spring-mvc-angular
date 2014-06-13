@@ -15,21 +15,22 @@ $ mvn install
 This command builds the application with default dev profile.
 There are two profiles that build cycles include: `dev` (development) and `prod` (production). Each profile has its own build scenarios.
 
-To run with explicit profile run `mvn install -P dev|prod`.
+To install with explicit profile run `mvn install -P dev|prod`.
 
-**Build cycle for dev profile**
+####Build cycle for dev profile
 
-- Install Node and npm locally (If not installed)
-- Install Node dependencies
-  - npm runs `bower install` after dependency installation. See `package.json`
+- Install Node and npm locally (If not installed).
+- Install Node dependencies.
+  - npm runs `bower install` after dependency installation. See `package.json`.
 - Install Bower dependencies.
 - Run Javascript tests and code coverage tool.
-- Runs Java tests with surefire
-- Compiles and builds WAR file.
+- Run Java tests with surefire.
+- Compile and build WAR file.
 
-**Build cycle for prod profile**
-Difference between dev and prod profiles is, Javascript files are built in prod profile unlike dev. After running Javascript tests all javascript files are minified, concatenated, revved and prepared to the production, thanks to the various Grunt plugins. Please see the uild task in `Gruntfile.js`.
-All the other steps applied here too.
+####Build cycle for prod profile  
+
+Difference between dev and prod profiles is, Javascript files are **built** in prod profile unlike dev. After running Javascript tests all javascript files are minified, concatenated, revved and prepared to the production, thanks to the various Grunt plugins. Please see the `build` task in `Gruntfile.js`.  
+All the other steps are applied here too.
 
 ##App Structure
 ```
@@ -71,13 +72,15 @@ All the other steps applied here too.
 ##Run
 Since this is a Spring Boot project it can be run with:
 ```
-  mvn spring-boot:run
+$ mvn spring-boot:run
 ```
 
 ##Watch
-With watch and connect plugins Javascript files can be watched and reloaded simultaneously when a Javascript fie is changed.
-To activate watching run the command below after running application.
-```grunt serve```
+With watch and connect plugins of grunt, web app files (js, html) can be watched and reloaded simultaneously when a Javascript fie is changed.
+To activate watching run the command below after running application.  
+```
+$ grunt serve
+```
 
 ##Author
 İsmail Demirbilek
