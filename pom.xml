@@ -7,6 +7,7 @@
     <groupId>net.egemsoft</groupId>
     <artifactId>net.egemsoft.spring-mvc-rest-base</artifactId>
     <version>1.0.0</version>
+    <packaging>war</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -29,7 +30,6 @@
                 <spring.profiles.active>dev</spring.profiles.active>
                 <!-- log configuration -->
                 <logback.loglevel>DEBUG</logback.loglevel>
-                <esef.version>1.0-SNAPSHOT</esef.version>
             </properties>
         </profile>
         <profile>
@@ -40,7 +40,6 @@
                 <!-- log configuration -->
                 <logback.loglevel>INFO</logback.loglevel>
                 <logback.appender>CONSOLE</logback.appender>
-                <esef.version>1.0-SNAPSHOT</esef.version>
             </properties>
             <build>
                 <plugins>
@@ -108,10 +107,6 @@
                 <version>2.3.2</version>
             </plugin>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
                 <groupId>com.github.eirslett</groupId>
                 <artifactId>frontend-maven-plugin</artifactId>
                 <version>0.0.14</version>
@@ -163,6 +158,10 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
