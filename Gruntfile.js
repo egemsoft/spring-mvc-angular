@@ -298,6 +298,14 @@ module.exports = function (grunt) {
           ]
         }
       }
+    },
+    ngdocs: {
+      options: {
+        dest: 'docs/javascript',
+        html5Mode: false,
+        title: 'MVCBase Documentation'
+      },
+      all: ['<%= appConfig.webapp %>/scripts/{,*/}*.js']
     }
   });
 
