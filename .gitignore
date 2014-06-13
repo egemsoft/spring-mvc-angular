@@ -5,3 +5,4 @@ node
 docs
 target
 .tmp
+coverage

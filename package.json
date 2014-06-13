@@ -32,7 +32,8 @@
     "karma-requirejs": "0.2.1",
     "karma-script-launcher": "0.1.0",
     "load-grunt-tasks": "0.4.0",
-    "time-grunt": "0.2.7"
+    "time-grunt": "0.2.7",
+    "karma-coverage": "^0.2.4"
   },
   "scripts": {
     "postinstall": "node_modules/.bin/bower install"

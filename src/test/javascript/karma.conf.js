@@ -20,6 +20,18 @@ module.exports = function (config) {
             'src/test/javascript/**/!(karma.conf).js'
         ],
 
+        // code coverage
+        preprocessors: {
+          'src/main/webapp/scripts/**/*.js': ['coverage']
+        },
+
+        reporters: ['coverage'],
+
+        coverageReporter: {
+          type : 'html',
+          dir : 'coverage/'
+        },
+
         // list of files / patterns to exclude
         exclude: [],
 
