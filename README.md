@@ -36,7 +36,7 @@ All the other steps are applied here too.
 ```
  coverage/              - Code coverage results
  docs/
-   javascript           - Javascript documentations created with `ngdoc`
+   javascript           - Javascript documentations created with ngdoc
    java                 - Java documentations
  src/
    main/
@@ -76,7 +76,7 @@ $ mvn spring-boot:run
 ```
 
 ##Watch
-With watch and connect plugins of grunt, web app files (js, html) can be watched and reloaded simultaneously when a Javascript fie is changed.
+With watch and connect plugins of grunt, web app files (js, html) can be watched and reloaded simultaneously when a source fie is changed.
 To activate watching run the command below after running application.  
 ```
 $ grunt serve
@@ -87,3 +87,15 @@ $ grunt serve
 
 ##License
 [MIT](http://opensource.org/licenses/MIT)
+
+##Credits
+
+- [Spring](http://spring.io)
+- [Mustache.java](https://github.com/spullara/mustache.java)
+- [Mustache Spring View](https://github.com/sps/mustache-spring-view)
+- [Maven Frontend Plugin](https://github.com/eirslett/frontend-maven-plugin)
+- [Angular JS](http://angularjs.org)
+- [Bower](http://bower.io)
+- [Grunt](http://gruntjs.com) and its awesome plugins.
+- [Phantom JS](http://phantomjs.org/)
+- [Karma](http://karma-runner.github.io/0.12/index.html) and inside it Jasmine, İstanbul.
