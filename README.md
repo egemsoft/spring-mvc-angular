@@ -1,7 +1,7 @@
 Spring MVC Base Project
 -----------------------
 
-This is a one handy seed project includes Spring MVC (with Spring Boot), Maven, Angular JS with both Java and Javascript tests.
+This is a one handy seed project includes Spring Framework, Spring MVC, Maven, Angular JS with both Java and Javascript tests.
 
 ![egemsoft-logo](http://egemsoft.net/images/logo.png)
 
@@ -70,9 +70,9 @@ All the other steps are applied here too.
 ```
 
 ##Run
-Since this is a Spring Boot project it can be run with:
+Project can be run with Jetty:
 ```
-$ mvn spring-boot:run
+$ mvn jetty:run
 ```
 
 ##Watch
