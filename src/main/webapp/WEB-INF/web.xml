@@ -1,0 +1,47 @@
+<web-app version="2.5"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+	        http://java.sun.com/xml/ns/j2ee/web-app_2_5.xsd">
+
+    <display-name>Spring MVC Application</display-name>
+
+    <servlet>
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>
+                classpath:spring/context-web.xml
+            </param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/scripts/*</url-pattern>
+        <url-pattern>/views/*</url-pattern>
+        <url-pattern>/images/*</url-pattern>
+        <url-pattern>/styles/*</url-pattern>
+        <url-pattern>/fonts/*</url-pattern>
+        <url-pattern>/bower_components/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath:spring/bootstrap.xml
+        </param-value>
+    </context-param>
+
+</web-app>

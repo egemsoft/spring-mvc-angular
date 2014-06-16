@@ -7,16 +7,10 @@
     <groupId>net.egemsoft</groupId>
     <artifactId>net.egemsoft.spring-mvc-rest-base</artifactId>
     <version>1.0.0</version>
-    <packaging>war</packaging>
-
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.1.1.RELEASE</version>
-    </parent>
 
     <properties>
-        <start-class>Application</start-class>
+        <spring.version>4.0.5.RELEASE</spring.version>
+        <jetty.version>9.1.2.v20140210</jetty.version>
     </properties>
 
     <profiles>
@@ -55,7 +49,7 @@
                                 </goals>
 
                                 <!-- optional: the default phase is "generate-resources" -->
-                                <phase>generate-resources</phase>
+                                <phase>process-resources</phase>
 
                                 <configuration>
                                     <!-- optional: if not specified, it will run Grunt's default
@@ -65,29 +59,12 @@
                             </execution>
                         </executions>
                     </plugin>
-                    <plugin>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-maven-plugin</artifactId>
-                        <configuration>
-                            <arguments>
-                                <argument>--spring.profiles.active=prod</argument>
-                            </arguments>
-                        </configuration>
-                    </plugin>
                 </plugins>
             </build>
         </profile>
     </profiles>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-        </dependency>
         <dependency>
             <groupId>com.github.sps.mustache</groupId>
             <artifactId>mustache-spring-view</artifactId>
@@ -97,6 +74,24 @@
             <groupId>com.github.spullara.mustache.java</groupId>
             <artifactId>compiler</artifactId>
             <version>0.8.15</version>
+        </dependency>
+        <!-- Spring 3 dependencies -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
         </dependency>
     </dependencies>
 
@@ -133,7 +128,6 @@
 
                         <!-- optional: default phase is "generate-resources" -->
                         <phase>generate-resources</phase>
-
                         <configuration>
                             <!-- optional: The default argument is actually
                             "install", so unless you need to run some other npm command,
@@ -148,8 +142,7 @@
                             <goal>grunt</goal>
                         </goals>
 
-                        <!-- optional: the default phase is "generate-resources" -->
-                        <phase>generate-resources</phase>
+                        <phase>test</phase>
 
                         <configuration>
                             <!-- optional: if not specified, it will run Grunt's default
@@ -160,22 +153,15 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jetty.version}</version>
+                <configuration>
+                    <webAppSourceDirectory>${project.basedir}/src/main/webapp</webAppSourceDirectory>
+                    <stopKey>foo</stopKey>
+                    <stopPort>9998</stopPort>
+                </configuration>
             </plugin>
         </plugins>
     </build>
-
-    <repositories>
-        <repository>
-            <id>spring-releases</id>
-            <url>http://repo.spring.io/libs-release</url>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>spring-releases</id>
-            <url>http://repo.spring.io/libs-release</url>
-        </pluginRepository>
-    </pluginRepositories>
 </project>
