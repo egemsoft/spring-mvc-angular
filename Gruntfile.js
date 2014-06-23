@@ -10,6 +10,7 @@ module.exports = function (grunt) {
     appConfig: {
       // configurable paths
       app: require('./bower.json').appPath || 'app',
+      name: 'MVC Seed',
       dist: '<%= appConfig.webapp %>/dist',
       webapp: 'src/main/webapp'
     },
@@ -303,7 +304,7 @@ module.exports = function (grunt) {
       options: {
         dest: 'docs/javascript',
         html5Mode: false,
-        title: 'MVCBase Documentation'
+        title: '<%= appConfig.name %> Documentation'
       },
       all: ['<%= appConfig.webapp %>/scripts/{,*/}*.js']
     }
