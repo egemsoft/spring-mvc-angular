@@ -49,7 +49,7 @@ All the other steps are applied here too.
          controllers/   - Angular controller files - each controller in one file (HomeCtrl -> home.js)
          directives/    - Angular directive files
          filters/       - Angular filter files
-         services       - Angular service and factory files
+         services/      - Angular service and factory files
          app.js         - Main Angular module
        style/           - Stylesheets
        views/           - Angular JS partial views
@@ -83,7 +83,7 @@ $ grunt serve
 ```
 
 ##Author
-İsmail Demirbilek
+İsmail Demirbilek ([@dbtek](http://twitter.com/dbtek))  
 
 ##License
 [MIT](http://opensource.org/licenses/MIT)
