@@ -100,7 +100,8 @@ module.exports = function (grunt) {
           ]
         }]
       },
-      server: '.tmp'
+      server: '.tmp',
+      bower: '<%= appConfig.webapp %>/bower_components'
     },
     jshint: {
       options: {
