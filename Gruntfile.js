@@ -10,9 +10,9 @@ module.exports = function (grunt) {
     appConfig: {
       // configurable paths
       app: require('./bower.json').appPath || 'app',
-      name: 'MVC Seed',
-      dist: '<%= appConfig.webapp %>/dist',
-      webapp: 'src/main/webapp'
+      name: 'Spring MVC Angular',
+      dist: 'src/main/webappDist',
+      webapp: 'src/main/webappResources'
     },
     watch: {
     styles: {

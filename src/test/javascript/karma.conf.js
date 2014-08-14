@@ -11,18 +11,18 @@ module.exports = function (config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'src/main/webapp/bower_components/angular/angular.js',
-            'src/main/webapp/bower_components/angular-mocks/angular-mocks.js',
-            'src/main/webapp/bower_components/angular-route/angular-route.js',
-            'src/main/webapp/bower_components/angular-resource/angular-resource.js',
-            'src/main/webapp/scripts/*.js',
-            'src/main/webapp/scripts/**/*.js',
+            'src/main/webappResources/bower_components/angular/angular.js',
+            'src/main/webappResources/bower_components/angular-mocks/angular-mocks.js',
+            'src/main/webappResources/bower_components/angular-route/angular-route.js',
+            'src/main/webappResources/bower_components/angular-resource/angular-resource.js',
+            'src/main/webappResources/scripts/*.js',
+            'src/main/webappResources/scripts/**/*.js',
             'src/test/javascript/**/!(karma.conf).js'
         ],
 
         // code coverage
         preprocessors: {
-          'src/main/webapp/scripts/**/*.js': ['coverage']
+          'src/main/webappResources/scripts/**/*.js': ['coverage']
         },
 
         reporters: ['coverage'],
