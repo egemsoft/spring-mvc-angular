@@ -35,9 +35,6 @@
     "time-grunt": "0.2.7",
     "karma-coverage": "^0.2.4"
   },
-  "scripts": {
-    "postinstall": "node_modules/.bin/bower install"
-  },
   "engines": {
     "node": ">=0.10.0"
   }
