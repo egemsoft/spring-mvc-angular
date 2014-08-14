@@ -1,7 +1,7 @@
 Spring MVC Angular JS Seed Project [![Build Status](https://travis-ci.org/egemsoft/spring-mvc-angular.svg?branch=master)](https://travis-ci.org/egemsoft/spring-mvc-angular)
 -----------------------
 
-This is a one handy seed project includes Spring Framework, Spring MVC, Spring Security, Maven, Angular JS with both Java and Javascript tests.
+This is a one handy seed project includes Spring Framework, Spring MVC, Maven, Angular JS with both Java and Javascript tests.
 
 ![egemsoft-logo](http://egemsoft.net/images/logo.png)
 
